@@ -112,33 +112,29 @@
             position: absolute;
             width: 50%;
             height: 100%;
+            overflow: hidden;
         }
 
         .bowl-left {
             left: 0;
-            background: linear-gradient(135deg, #ff6b6b 0%, #ff8787 100%);
-            display: flex;
-            align-items: center;
-            justify-content: center;
         }
 
         .bowl-right {
             right: 0;
-            background: linear-gradient(135deg, #d4a373 0%, #c4935f 100%);
         }
 
-        .kibble-pattern {
-            width: 100%;
+        .bowl-section img {
+            width: 200%;
             height: 100%;
-            background-image: radial-gradient(circle, #8b6f47 20%, transparent 21%);
-            background-size: 25px 25px;
+            object-fit: cover;
         }
 
-        .vegetables {
-            font-size: 40px;
-            display: flex;
-            flex-direction: column;
-            gap: 10px;
+        .bowl-left img {
+            object-position: right center;
+        }
+
+        .bowl-right img {
+            object-position: left center;
         }
 
         .leaf-center {
@@ -148,6 +144,14 @@
             transform: translate(-50%, -50%);
             font-size: 50px;
             z-index: 10;
+            background-color: white;
+            border-radius: 50%;
+            width: 70px;
+            height: 70px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.2);
         }
 
         /* CTA Button */
@@ -368,13 +372,10 @@
             <div class="bowl-container">
                 <div class="dog-bowl">
                     <div class="bowl-section bowl-left">
-                        <div class="vegetables">
-                            <span>🍓</span>
-                            <span>🥕</span>
-                        </div>
+                        <img src="https://images.unsplash.com/photo-1610348725531-843dff563e2c?w=600&h=600&fit=crop" alt="Fresh vegetables and fruits">
                     </div>
                     <div class="bowl-section bowl-right">
-                        <div class="kibble-pattern"></div>
+                        <img src="https://images.unsplash.com/photo-1589924691995-400dc9ecc119?w=600&h=600&fit=crop" alt="Dog food kibble">
                     </div>
                     <div class="leaf-center">🌿</div>
                 </div>
